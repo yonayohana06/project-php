@@ -8,8 +8,18 @@
 </head>
 <body>
     <div class="container">
+        @if (session('success'))
+            <div class="alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
         <h1>Hello World</h1>
         <p>Selamat datang di aplikasi Laravel!</p>
+        
+        <div class="home-actions">
+            <a href="{{ url('/register') }}" class="btn">Registrasi Akun Baru</a>
+        </div>
     </div>
 </body>
 </html>
